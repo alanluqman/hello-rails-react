@@ -21,17 +21,3 @@ export const fetchGreeting = createAsyncThunk(FETCH, async () => {
   const data = await response.json();
   return data.greet;
 });
-
-// const GET_MESSEGE = '/greetings';
-
-// export default function getMessege(state = [], action) {
-//   switch (action.type) {
-//     case GET_MESSEGE: return action.payload;
-//     default: return state;
-//   }
-// }
-
-// export const fetchMessege = (messege) => ({
-//   type: GET_MESSEGE,
-//   payload: messege,
-// });
