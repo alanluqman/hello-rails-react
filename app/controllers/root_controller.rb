@@ -4,7 +4,8 @@ class RootController < ApplicationController
 
   def show
     request.format = :json
-    @greetings = Greeting.all
+    @greetings = Greeting.order(Arel.sql('RANDOM()')).first
+
     render json: @greetings
   end
 end
