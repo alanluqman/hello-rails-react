@@ -1,6 +1,5 @@
 class RootController < ApplicationController
-  def index
-  end
+  def index; end
 
   def show
     request.format = :json

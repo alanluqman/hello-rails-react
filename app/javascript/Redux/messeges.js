@@ -1,11 +1,11 @@
-import { createAsyncThunk } from "@reduxjs/toolkit";
+import { createAsyncThunk } from '@reduxjs/toolkit';
 
-const API_URL = "http://127.0.0.1:3000/greeting";
+const API_URL = 'http://127.0.0.1:3000/greeting';
 
-const FETCH = "http://127.0.0.1:3000/greeting/FETCH";
+const FETCH = 'http://127.0.0.1:3000/greeting/FETCH';
 
 const initialState = {
-  greeting: "",
+  greeting: '',
 };
 export default (state = initialState, action) => {
   switch (action.type) {
@@ -21,8 +21,6 @@ export const fetchGreeting = createAsyncThunk(FETCH, async () => {
   const data = await response.json();
   return data.greet;
 });
-
-
 
 // const GET_MESSEGE = '/greetings';
 
